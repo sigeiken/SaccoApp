@@ -1,0 +1,47 @@
+
+server:
+  port: 8081
+
+
+datasource:
+  url: jdbc:mysql://localhost:3306/SACCOMOBILE
+  username: root
+  password:
+  driverClassName: com.mysql.cj.jdbc.Driver
+  maxPoolSize: 50
+  connectionTimeout: 30000
+  idleTimeout: 600000
+  maxLifetime: 1800000
+  hibernate:
+    hbm2ddl.method: validate
+    show_sql: false
+    format_sql: false
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    timeout: 2000
+cbs:
+  url: http://localhost:8080/api/cbs/
+  username: SACCO
+  password": 4e3c34888cdb6c0ee32a3b3e4e8ffe2945bf6013dc53b47b1cf290ed85399763
+
+mpesa:
+  auth_url: https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials
+  consumer_key: Rbk2vdjuAkLn5gyeyriOtGqjQV5gZgoi
+  consumer_secret: zZUwyWUm4HxBjpB6
+  shortcode: 174379
+  stk_push_passkey: bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
+  stkcallback:  https://9b150a075245.ngrok.io/api/financial/stkcallback
+  stk_push_url: https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
+  InitiatorName: TestInit610
+  b2c_url: https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest
+  SecurityCredential: p/EseFqZ0ChfcNTwkQ2PFNg6DtvMQzFHitRhrnOTNKaca9zggoZk0aa1DmgraLUA0/cZJ5f9pdg9oRM9UEMk/Ixud8sU17pNO4z8/43c9XrG2kSHO9fWkPVSXmSLRswOsWDRdCb5Q9oEOB41SjIGlqMzUQ6tz34mO4ll6SJMU6Fwp/z15x8soHZRGyeYxrYDweKFIQMGnNWTMs4PkmQojsb3oNQMwL6tfQpc89bOpeSW5H4j4/aHRaQGl5nEIUngq5aiUhAPVTwGge9cWf5r5THMR/8lNBAidN3hNtTurvwYcydp0Xj0uxMv3Qg642aCoALkYvxd2fb36PVw==
+  QueueTimeOutURL: http://9b150a075245.ngrok.io/api/financial/b2ctimeouturl
+  ResultURL: http://09222d4d0801.ngrok.io/api/financial/b2cresulturl
+  PartyA: 600610
+
+scheduledtasks:
+  threadpoolsize: 5
+
+twilio:
+  TRIAL_NUMBER: +15153258821
+  ACCOUNT_SID: ACa4fbe7dade15481e98d4dea65fb493b0
+  AUTH_TOKEN: f58d5d2751b665a955ae9e5a7ac64ad0
