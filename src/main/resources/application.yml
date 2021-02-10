@@ -42,6 +42,6 @@ scheduledtasks:
   threadpoolsize: 5
 
 twilio:
-  TRIAL_NUMBER: +15153258821
-  ACCOUNT_SID: ACa4fbe7dade15481e98d4dea65fb493b0
-  AUTH_TOKEN: f58d5d2751b665a955ae9e5a7ac64ad0
+  TRIAL_NUMBER:
+  ACCOUNT_SID:
+  AUTH_TOKEN:
